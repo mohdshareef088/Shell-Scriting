@@ -1,6 +1,5 @@
 Shell Scripting Projects
 This repository contains a collection of Shell Scripting Projects created to practice and demonstrate automation, monitoring, and system administration tasks in a Linux/Unix environment.
-
 These scripts are designed for beginners who want to strengthen their command-line skills, understand how to automate routine system tasks, and learn how shell scripting can simplify daily operations.
 
 ⚙️ Features
