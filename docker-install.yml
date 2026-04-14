@@ -1,0 +1,14 @@
+---
+- hosts: webservers
+  become: true
+
+  tasks:
+
+    - name: Install Docker
+      command: yum install docker -y
+
+    - name: Enable and start Docker service
+      service:
+        name: docker
+        state: started
+        enabled: true

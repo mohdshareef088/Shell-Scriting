@@ -1,0 +1,14 @@
+---
+- hosts: webservers
+  become: true
+
+  tasks:
+
+    - name: Install httpd
+      command: yum install -y httpd
+
+    - name: Enable and start httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: true

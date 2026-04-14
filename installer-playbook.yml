@@ -1,0 +1,22 @@
+---
+- hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install required packages
+      dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - zip
+        - httpd
+        - git
+        - wget
+        - at
+        - net-tools
+
+    - name: Enable and start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: true
